@@ -54,7 +54,7 @@
 const motsApplication = ["Cachalot", "Pétunia", "Serviette"]
 let score = 0
 
-let motUtilisateur = prompt ("Entrez le premier mot : ")
+let motUtilisateur = prompt ("Entrez le mot : " + motsApplication[0])
 
 switch (motUtilisateur){
     case motsApplication[0]:
@@ -69,7 +69,7 @@ switch (motUtilisateur){
     
 }
 
-motUtilisateur = prompt ("Entrez le deuxième mot : ")
+motUtilisateur = prompt ("Entrez le mot : " + motsApplication[1])
 
 switch (motUtilisateur){
     case motsApplication[1]:
@@ -84,7 +84,7 @@ switch (motUtilisateur){
     
 }
 
-motUtilisateur = prompt ("Entrez le troisième mot :")
+motUtilisateur = prompt ("Entrez le mot : " + motsApplication[2])
 
 switch (motUtilisateur){
     case motsApplication[2]:
@@ -98,3 +98,13 @@ switch (motUtilisateur){
             console.log("Score :" + score);
     
 }
+
+//? Ici j'aurais dû utiliser les conditions if, mais ça marche aussi avec Switch et Case
+//? même si c'est pas fait pour ça
+//? et je ne connaissais pas cette fonction alors ça m'a amusé de l'utiliser
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+
+
+// Suite du cours : openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8205519-repetez-du-code-grace-aux-boucles
