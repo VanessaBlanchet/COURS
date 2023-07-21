@@ -1,6 +1,6 @@
 // console.log("Hello World !");
 
-// const motApplication = "Bonjour"
+// let motApplication = "Bonjour"
 
 
 // let motUtilisateur = prompt("Entrez un mot :")
@@ -56,48 +56,84 @@ let score = 0
 
 let motUtilisateur = prompt ("Entrez le mot : " + motsApplication[0])
 
-switch (motUtilisateur){
-    case motsApplication[0]:
-        console.log("Bravo !")
-        score += 1
-        console.log("Score : " + score)
-        break
-        
-        default:
-            console.log("Faux !")
-            console.log("Score :" + score);
-    
+// Je vérifie que je récupère bien le mot entré par l'utilisateur : 
+// console.log(motUtilisateur);
+
+if (motUtilisateur === motsApplication[0]){
+    console.log("Bravo !")
+    score += 1
+    console.log("Score : " + score)
+} else {
+    console.log("Faux ! ")
+    console.log("Score : " + score);
 }
+
+
+// switch (motUtilisateur){
+//     case motsApplication[0]:
+//         console.log("Bravo !")
+//         score += 1
+//         console.log("Score : " + score)
+//         break
+        
+//         default:
+//             console.log("Faux !")
+//             console.log("Score :" + score);
+    
+// }
 
 motUtilisateur = prompt ("Entrez le mot : " + motsApplication[1])
 
-switch (motUtilisateur){
-    case motsApplication[1]:
-        console.log("Bravo !")
-        score += 1
-        console.log("Score : " + score)
-        break
-        
-        default:
-            console.log("Faux !")
-            console.log("Score :" + score);
-    
+if (motUtilisateur === motsApplication[1]){
+    console.log("Bravo !")
+    score += 1
+    console.log("Score : " + score);
+}  else {
+    console.log("Faux ! ")
+    console.log("Score : " + score);
 }
+
+
+// motUtilisateur = prompt ("Entrez le mot : " + motsApplication[1])
+
+// switch (motUtilisateur){
+//     case motsApplication[1]:
+//         console.log("Bravo !")
+//         score += 1
+//         console.log("Score : " + score)
+//         break
+        
+//         default:
+//             console.log("Faux !")
+//             console.log("Score :" + score);
+    
+// }
 
 motUtilisateur = prompt ("Entrez le mot : " + motsApplication[2])
 
-switch (motUtilisateur){
-    case motsApplication[2]:
-        console.log("Bravo !")
-        score += 1
-        console.log("Score : " + score)
-        break
-        
-        default:
-            console.log("Faux !")
-            console.log("Score :" + score);
-    
+if (motUtilisateur === motsApplication[2]){
+    console.log("Bravo !")
+    score += 1
+    console.log("Score : " + score);
+}  else {
+    console.log("Faux ! ")
+    console.log("Score : " + score);
 }
+
+// motUtilisateur = prompt ("Entrez le mot : " + motsApplication[2])
+
+// switch (motUtilisateur){
+//     case motsApplication[2]:
+//         console.log("Bravo !")
+//         score += 1
+//         console.log("Score : " + score)
+//         break
+        
+//         default:
+//             console.log("Faux !")
+//             console.log("Score :" + score);
+    
+// }
 
 //? Ici j'aurais dû utiliser les conditions if, mais ça marche aussi avec Switch et Case
 //? même si c'est pas fait pour ça
@@ -107,4 +143,3 @@ switch (motUtilisateur){
 // ------------------------------------------------------------------
 
 
-// Suite du cours : openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8205519-repetez-du-code-grace-aux-boucles
