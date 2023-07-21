@@ -30,11 +30,11 @@
 //     case motApplication:
 //         console.log("Bravo !")
 //         break
-    
+
 //     case "Gredin":
 //         console.log("Restez correct !")
 //         break
-    
+
 //     case "Mécréant":
 //         console.log("Restez correct !")
 //         break
@@ -42,7 +42,7 @@
 //     case "Vilain":
 //         console.log("Restez correct !")
 //         break
-    
+
 //     default:
 //         console.log("Vous avez fait une erreur de frappe");
 // }
@@ -78,11 +78,11 @@
 //         score += 1
 //         console.log("Score : " + score)
 //         break
-        
+
 //         default:
 //             console.log("Faux !")
 //             console.log("Score :" + score);
-    
+
 // }
 
 //! Condition avec if
@@ -108,11 +108,11 @@
 //         score += 1
 //         console.log("Score : " + score)
 //         break
-        
+
 //         default:
 //             console.log("Faux !")
 //             console.log("Score :" + score);
-    
+
 // }
 //! Condition avec if
 
@@ -137,11 +137,11 @@
 //         score += 1
 //         console.log("Score : " + score)
 //         break
-        
+
 //         default:
 //             console.log("Faux !")
 //             console.log("Score :" + score);
-    
+
 // }
 
 //? Ici j'aurais dû utiliser les conditions if, mais ça marche aussi avec Switch et Case
@@ -151,7 +151,7 @@
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
-const motsApplication = ["Cachalot", "Pétunia", "Serviette"]
+const motsApplication = ["Cachalot", "Pétunia", "Serviette", "Bourriquet", "Eléphant"]
 i = 0
 score = 0
 
@@ -159,49 +159,49 @@ score = 0
 
 // console.log("motApplication : " + motsApplication[i])
 console.log("Id initial : " + i);
-console.log("Score initial : " + score );
+console.log("Score initial : " + score);
 
 // Je vérifie que je récupère bien} le mot entré par l'utilisateur : ça marche 
 
-motUtilisateur = prompt ("Entrez le mot : " + motsApplication[i])
+motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
 
 // console.log("motUtilisateur : " + motUtilisateur)
 
 
 
-while (i < 3){
+while (i < 5) {
 
     console.log("Id du mot demandé : " + i)
     console.log("Mot attendu : " + motsApplication[i])
     console.log("Mot tapé : " + motUtilisateur)
-    
-    if (motUtilisateur === motsApplication[i]){
-    console.log("Bravo !")
-    score ++
-    console.log("Score : " + score)
-    i++
 
-    if (i < 3 ){
-    motUtilisateur = prompt ("Entrez le mot : " + motsApplication[i])
-    } else {
-        console.log("C'est fini ! Score final : " + score);
-    }
+    if (motUtilisateur === motsApplication[i]) {
+        console.log("Bravo !")
+        score++
+        console.log("Score : " + score)
+        i++
+
+//! Ici je suis obligée de rajouter un if (ligne 186) dans le if (ligne 178) pour ne pas que l'appli me demande un mot supplémentaire par rapport à ceux présents dans le tableau à cause du i++ juste avant, pour arrêter le jeu une fois que tous les mots ont été proposés
+
+        if (i < 5) {
+            motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+        } else {
+            console.log("C'est fini ! Score final : " + score);
+        }
 
     } else {
         console.log("Faux !")
         console.log("Score : " + score)
         i++
-        
-        if (i < 3 ){
-            motUtilisateur = prompt ("Entrez le mot : " + motsApplication[i])
-            } else {
-                console.log("C'est fini ! Score final : " + score);
-            }
-        
-        
+
+        if (i < 5) {
+            motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+        } else {
+            console.log("C'est fini ! Score final : " + score);
+        }
+
     }
-
-
 }
 
 
+// Prochaine étape : https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8205714-organisez-votre-code-grace-aux-fonctions 
