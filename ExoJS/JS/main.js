@@ -159,6 +159,7 @@ score = 0
 
 // console.log("motApplication : " + motsApplication[i])
 console.log("Id initial : " + i);
+console.log("Score initial : " + score );
 
 // Je vérifie que je récupère bien} le mot entré par l'utilisateur : ça marche 
 
@@ -179,19 +180,28 @@ while (i < 3){
     score ++
     console.log("Score : " + score)
     i++
+
+    if (i < 3 ){
     motUtilisateur = prompt ("Entrez le mot : " + motsApplication[i])
+    } else {
+        console.log("C'est fini ! Score final : " + score);
+    }
 
     } else {
         console.log("Faux !")
         console.log("Score : " + score)
         i++
-        motUtilisateur = prompt ("Entrez le mot : " + motsApplication[i])
+        
+        if (i < 3 ){
+            motUtilisateur = prompt ("Entrez le mot : " + motsApplication[i])
+            } else {
+                console.log("C'est fini ! Score final : " + score);
+            }
+        
         
     }
 
-    console.log(motUtilisateur);
 
 }
 
 
-// Il y a un problème dans le code ci-dessus : le prompt apparaît une fois de trop en me demandant un mot de plus (undefined, du coup, c'est logique puisqu'il n'y a que 3 mots dans la liste des mots de l'application)
