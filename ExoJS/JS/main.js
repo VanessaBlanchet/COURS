@@ -58,8 +58,8 @@
 
 // let motUtilisateur = prompt ("Entrez le mot : " + motsApplication[0])
 
-// // Je vérifie que je récupère bien le mot entré par l'utilisateur : 
-// // console.log(motUtilisateur);
+// Je vérifie que je récupère bien le mot entré par l'utilisateur : 
+// console.log(motUtilisateur);
 
 // if (motUtilisateur === motsApplication[0]){
 //     console.log("Bravo !")
@@ -181,7 +181,9 @@ while (i < 5) {
         console.log("Score : " + score)
         i++
 
-//! Ici je suis obligée de rajouter un if (ligne 186) dans le if (ligne 178) pour ne pas que l'appli me demande un mot supplémentaire par rapport à ceux présents dans le tableau à cause du i++ juste avant, pour arrêter le jeu une fois que tous les mots ont été proposés
+//! Ici je suis obligée de rajouter un if (ligne 186) dans le if (ligne 178) pour ne pas 
+//! que l'appli me demande un mot supplémentaire par rapport à ceux présents dans le tableau 
+//! à cause du i++ juste avant, pour arrêter le jeu une fois que tous les mots ont été proposés
 
         if (i < 5) {
             motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
