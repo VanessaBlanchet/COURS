@@ -1,4 +1,4 @@
-// console.log("Hello World !");
+
 
 // let motApplication = "Bonjour"
 
@@ -151,7 +151,10 @@
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
-const motsApplication = ["Cachalot", "Pétunia", "Serviette", "Bourriquet", "Eléphant"]
+//! La déclaration de la variable motsApplication ci-dessous a été commentée 
+//! et déplacée dans le fichier config.js
+
+// const motsApplication = ["Cachalot", "Pétunia", "Serviette", "Bourriquet", "Eléphant"]
 i = 0
 score = 0
 
@@ -205,5 +208,16 @@ while (i < 5) {
     }
 }
 
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
 
-// Prochaine étape : https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8205714-organisez-votre-code-grace-aux-fonctions 
+//! Les fonctions
+
+// => voir fichier config.js
+
+let nombreQuestions = 5
+function retournerMessageScore (score, nombreQuestions){
+    let message = 'Votre score est de ' + score + 'sur' + nombreQuestions
+    return message
+}
+

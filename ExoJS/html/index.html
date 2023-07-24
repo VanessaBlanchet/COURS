@@ -5,11 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../JS/main.js"></script>
+
+<!-- Ici on a ajouté la commande defer pour que JS attende que la page HTML soit chargée pour 
+se mettre en route. 
+NB : je me demande pourquoi pas DomContentLoaded ? à voir... -->
+
+    <script src="../JS/config.js" defer></script>
+    <script src="../JS/script.js" defer></script>
+    <!-- <script src="../JS/main.js" defer></script> -->
 </head>
 <body>
     <header>
-        <h1>Petit jeu de mots... </h1>
+        <h1>Petit jeu de mots... AZERTYPE </h1>
     </header>
+
+    <main>
+        <div>
+            <h2>Le Jeu</h2>
+            <p>Voici un petit jeu qui consiste simplement à taper les mots affichés dans votre navigateur</p>
+        </div>
+
+        <div>
+            <h2>Votre score</h2>
+            <p>Pour chaque mot tapé correctement, vous gagnerez 1 point</p>
+            <p>En cas d'erreur, vous ne gagnez pas de point et passez au mot suivant</p>
+        </div>
+
+        <div class="zoneChoix">
+            <input type="radio" name="optionSource" id="mots" value="1" checked>
+            <label for="mots">Mots</label>
+
+            <input type="radio" name="optionSource" id="phrases" value="2">
+            <label for="phrases">Phrases</label>
+
+        </div>
+
+        <div id="zoneProposition">
+
+            <p>Entrez le mot :  <span>Cachalot</span></p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>@Copyright : OPC</p>
+    </footer>
 </body>
 </html>
