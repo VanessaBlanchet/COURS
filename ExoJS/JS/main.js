@@ -154,6 +154,10 @@
 //! La déclaration de la variable motsApplication ci-dessous a été commentée 
 //! et déplacée dans le fichier config.js
 
+function init(){
+
+
+
 // const motsApplication = ["Cachalot", "Pétunia", "Serviette", "Bourriquet", "Eléphant"]
 i = 0
 score = 0
@@ -207,6 +211,7 @@ while (i < 5) {
 
     }
 }
+}
 
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
@@ -221,3 +226,4 @@ function retournerMessageScore (score, nombreQuestions){
     return message
 }
 
+document.addEventListener("DOMContentLoaded", init)
