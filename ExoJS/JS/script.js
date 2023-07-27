@@ -28,8 +28,8 @@ console.log("Liste inputRadio : " + listeInputRadio)
 // le mot demandé. Je le récupère ici, puis je vérifie que ça marche en faisant un console.log
 
 let motAffiche = document.getElementById("motAffiche")
+let nouveauMot = document.createElement("p")
 
 console.log("Mot Affiché : " + motAffiche);
 
 // ça marche
-
