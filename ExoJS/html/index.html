@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AZERTYPE</title>
 
-<!-- Ici on a ajouté la commande defer pour que JS attende que la page HTML soit chargée pour 
-se mettre en route. 
-NB : je me demande pourquoi pas DomContentLoaded ? à voir... -->
+    <!-- Ici on a ajouté la commande defer pour que JS attende que la page HTML soit chargée pour 
+se mettre en route.  -->
 
+
+    <link rel="stylesheet" href="../CSS/style.css">
     <script src="../JS/config.js" defer></script>
     <script src="../JS/script.js" defer></script>
-    <script src="../JS/main.js" defer></script>
+    <!-- <script src="../JS/main.js" defer></script> -->
+
 </head>
+
 <body>
     <header>
-        <h1>Petit jeu de mots... AZERTYPE </h1>
+        <h1>Petit jeu de mots : AZERTYPE </h1>
     </header>
 
     <main>
@@ -30,7 +34,14 @@ NB : je me demande pourquoi pas DomContentLoaded ? à voir... -->
             <p>Pour chaque mot tapé correctement, vous gagnerez 1 point</p>
             <p>En cas d'erreur, vous ne gagnez pas de point et passez au mot suivant</p>
         </div>
+        <br>
 
+        <div id="images_ajoutees">
+
+            <img id="randomImg" src="https://fastly.picsum.photos/id/848/300/300.jpg?hmac=4E3060rBTR0RGvgVCsaiHnX6dUTuzWJUeIrpqoxfYsg" alt="Image aléatoire"
+                class="border">
+        </div>
+        <br>
         <div class="zoneChoix">
             <input type="radio" name="optionSource" id="mots" value="1" checked>
             <label for="mots">Mots</label>
@@ -46,7 +57,7 @@ NB : je me demande pourquoi pas DomContentLoaded ? à voir... -->
 
         <div id="zoneProposition">
 
-            <p>Entrez le mot :  <span id="motAffiche">Cachalot</span></p>
+            <p>Entrez le mot : <span id="motAffiche">Cachalot</span></p>
         </div>
 
         <div>
@@ -63,4 +74,5 @@ NB : je me demande pourquoi pas DomContentLoaded ? à voir... -->
         <p>@Copyright : OPC</p>
     </footer>
 </body>
+
 </html>

@@ -11,6 +11,22 @@
  * Eléments génériques
  */
 
+ .border{
+    border: solid 5px white;
+}
+
+#images_ajoutees{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 2em;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+
+
 body {
     --color-primary: #f76c5e;
     --color-secondary: #f68e5f;
@@ -23,6 +39,7 @@ h1 {
     font-size: 60px;
     font-weight: 900;
     color: var(--color-primary);
+    text-align: center;
 }
 
 h2 {
