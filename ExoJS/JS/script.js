@@ -94,12 +94,12 @@ let monBouton = document.getElementById("startButton")
 // })
 
 monBouton.addEventListener("click", () => {
-    console.log("Vous avez cliqué sur le bouton")
+    console.log("Vous avez cliqué sur le bouton Lancer le jeu")
 });
 
 // Fonction qui nous indique quelle touche du clavier a été tapée : 
 
-document.addEventListener('keypress', (event) => {
-    console.log(event.key);
-});
+// document.addEventListener('keypress', (event) => {
+//     console.log(event.key);
+// });
 

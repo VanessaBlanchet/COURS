@@ -154,65 +154,84 @@
 //! La déclaration de la variable motsApplication ci-dessous a été commentée 
 //! et déplacée dans le fichier config.js
 
-function init(){
+function init() {
+
+
+    // Je mets un écouteur d'évènement sur le bouton Valider
+
+    let boutonValider = document.getElementById("submitButton")
+    let inputEcriture = document.getElementById("inputEcriture ")
+    let deuz = document.getElementById("writing")
+
+    
+
+    // Je récupère ce que l'utilisateur a tapé dans le champ "inputEcriture " :
+    
+    boutonValider.addEventListener("click", function() {
+        console.log(inputEcriture.value)
+    });
+
+//! Problème : ça ne fonctionne pas cannot read properties of null (reading 'value')
+
+
+    console.log("inputEcriture : " + inputEcriture);
+
+
+    // const motsApplication = ["Cachalot", "Pétunia", "Serviette", "Bourriquet", "Eléphant"]
+    i = 0
+    score = 0
+
+    //Je vérifie que je récupère bien le mot : ça marche
+
+    // console.log("motApplication : " + motsApplication[i])
+    console.log("Id initial : " + i);
+    console.log("Score initial : " + score);
+
+    // Je vérifie que je récupère bien le mot entré par l'utilisateur : ça marche 
+
+    // motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+
+    // console.log("motUtilisateur : " + motUtilisateur)
 
 
 
-// const motsApplication = ["Cachalot", "Pétunia", "Serviette", "Bourriquet", "Eléphant"]
-i = 0
-score = 0
+    // while (i < 5) {
 
-//Je vérifie que je récupère bien le mot : ça marche
+    //     console.log("Id du mot demandé : " + i)
+    //     console.log("Mot attendu : " + motsApplication[i])
+    //     console.log("Mot tapé : " + motUtilisateur)
 
-// console.log("motApplication : " + motsApplication[i])
-console.log("Id initial : " + i);
-console.log("Score initial : " + score);
+    //     if (motUtilisateur === motsApplication[i]) {
+    //         console.log("Bravo !")
+    //         score++
+    //         console.log("Score : " + score)
+    //         i++
 
-// Je vérifie que je récupère bien le mot entré par l'utilisateur : ça marche 
+            //! Ici je suis obligée de rajouter un if (ligne 186) dans le if (ligne 178) pour ne pas 
+            //! que l'appli me demande un mot supplémentaire par rapport à ceux présents dans le tableau 
+            //! à cause du i++ juste avant, pour arrêter le jeu une fois que tous les mots ont été proposés
 
-// motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+            //     if (i < 5) {
+            //         motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+            //     } else {
+            //         console.log("C'est fini ! Score final : " + score);
+            //     }
 
-// console.log("motUtilisateur : " + motUtilisateur)
+            // } else {
+            //     console.log("Faux !")
+            //     console.log("Score : " + score)
+            //     i++
 
+            //     if (i < 5) {
+            //         motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+            //     } else {
+            //         console.log("C'est fini ! Score final : " + score);
+            //     }
 
-
-while (i < 5) {
-
-    console.log("Id du mot demandé : " + i)
-    console.log("Mot attendu : " + motsApplication[i])
-    console.log("Mot tapé : " + motUtilisateur)
-
-    if (motUtilisateur === motsApplication[i]) {
-        console.log("Bravo !")
-        score++
-        console.log("Score : " + score)
-        i++
-
-//! Ici je suis obligée de rajouter un if (ligne 186) dans le if (ligne 178) pour ne pas 
-//! que l'appli me demande un mot supplémentaire par rapport à ceux présents dans le tableau 
-//! à cause du i++ juste avant, pour arrêter le jeu une fois que tous les mots ont été proposés
-
-    //     if (i < 5) {
-    //         motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
-    //     } else {
-    //         console.log("C'est fini ! Score final : " + score);
-    //     }
-
-    // } else {
-    //     console.log("Faux !")
-    //     console.log("Score : " + score)
-    //     i++
-
-    //     if (i < 5) {
-    //         motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
-    //     } else {
-    //         console.log("C'est fini ! Score final : " + score);
-    //     }
-
-    // }
-}
-}
-
+            // }
+//         }
+//     }
+// }
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
@@ -220,10 +239,13 @@ while (i < 5) {
 
 // => voir fichier config.js
 
-let nombreQuestions = 5
-function retournerMessageScore (score, nombreQuestions){
-    let message = 'Votre score est de ' + score + 'sur' + nombreQuestions
-    return message
+// let nombreQuestions = 5
+// function retournerMessageScore(score, nombreQuestions) {
+//     let message = 'Votre score est de ' + score + 'sur' + nombreQuestions
+//     return message
 }
+
+
+
 
 document.addEventListener("DOMContentLoaded", init)
