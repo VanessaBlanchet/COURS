@@ -85,8 +85,21 @@ nouvelleDiv.appendChild(nouveauParagraphe)
 let maDiv = document.getElementById("images_ajoutees")
 maDiv.appendChild(nouvelleDiv)
 
-//! la partie ci-dessus est à revoir : 
+// TODO : la partie ci-dessus est à revoir : 
 // je souhaite rajouter une deuxième photo à la place du titre et du texte proposés par l'exercice
 
+let monBouton = document.getElementById("startButton")
+// monBouton.addEventListener("click", function() {
+//     console.log("Bouton cliqué")
+// })
 
+monBouton.addEventListener("click", () => {
+    console.log("Vous avez cliqué sur le bouton")
+});
+
+// Fonction qui nous indique quelle touche du clavier a été tapée : 
+
+document.addEventListener('keypress', (event) => {
+    console.log(event.key);
+});
 

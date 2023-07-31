@@ -168,9 +168,9 @@ score = 0
 console.log("Id initial : " + i);
 console.log("Score initial : " + score);
 
-// Je vérifie que je récupère bien} le mot entré par l'utilisateur : ça marche 
+// Je vérifie que je récupère bien le mot entré par l'utilisateur : ça marche 
 
-motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+// motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
 
 // console.log("motUtilisateur : " + motUtilisateur)
 
@@ -192,24 +192,24 @@ while (i < 5) {
 //! que l'appli me demande un mot supplémentaire par rapport à ceux présents dans le tableau 
 //! à cause du i++ juste avant, pour arrêter le jeu une fois que tous les mots ont été proposés
 
-        if (i < 5) {
-            motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
-        } else {
-            console.log("C'est fini ! Score final : " + score);
-        }
+    //     if (i < 5) {
+    //         motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+    //     } else {
+    //         console.log("C'est fini ! Score final : " + score);
+    //     }
 
-    } else {
-        console.log("Faux !")
-        console.log("Score : " + score)
-        i++
+    // } else {
+    //     console.log("Faux !")
+    //     console.log("Score : " + score)
+    //     i++
 
-        if (i < 5) {
-            motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
-        } else {
-            console.log("C'est fini ! Score final : " + score);
-        }
+    //     if (i < 5) {
+    //         motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+    //     } else {
+    //         console.log("C'est fini ! Score final : " + score);
+    //     }
 
-    }
+    // }
 }
 }
 
