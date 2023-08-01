@@ -160,22 +160,22 @@ function init() {
     // Je mets un écouteur d'évènement sur le bouton Valider
 
     let boutonValider = document.getElementById("submitButton")
-    let inputEcriture = document.getElementById("inputEcriture ")
-    let deuz = document.getElementById("writing")
-
-    
+    let inputEcriture = document.querySelector(".inputEcriture ")    
 
     // Je récupère ce que l'utilisateur a tapé dans le champ "inputEcriture " :
     
     boutonValider.addEventListener("click", function() {
         console.log(inputEcriture.value)
+
     });
 
 //! Problème : ça ne fonctionne pas cannot read properties of null (reading 'value')
+// Solution : let inputEcriture = document.getElementById("inputEcriture ")  ne fonctionne pas
+// Par contre : let inputEcriture = document.querySelector(".inputEcriture ")  fonctionne... 
 
 
     console.log("inputEcriture : " + inputEcriture);
-
+    console.log("boutonValider : " + boutonValider);
 
     // const motsApplication = ["Cachalot", "Pétunia", "Serviette", "Bourriquet", "Eléphant"]
     i = 0
