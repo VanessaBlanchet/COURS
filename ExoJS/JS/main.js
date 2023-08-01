@@ -155,31 +155,47 @@
 //! et déplacée dans le fichier config.js
 
 function init() {
-
+    i = 0
+    score = 0
 
     // Je mets un écouteur d'évènement sur le bouton Valider
 
     let boutonValider = document.getElementById("submitButton")
     let inputEcriture = document.querySelector(".inputEcriture ")    
 
-    // Je récupère ce que l'utilisateur a tapé dans le champ "inputEcriture " :
+
+    // J'affiche la proposition du jeu que l'utilisateur doit recopier : 
+
+    function afficherProposition(motsApplication) {
+        
+        let motATaper = document.querySelector(".motAffiche")
+        motATaper.innerText = motsApplication[i];
+    }
+
+    //! Attention ici problème : dans la zone de proposition, après "Entrez le mot : " il affiche n'importe quoi...
+
+    afficherProposition(motsApplication[i])
     
     boutonValider.addEventListener("click", function() {
         console.log(inputEcriture.value)
+        i ++ 
+        console.log(i);
+        console.log(motsApplication[i]);
+        afficherProposition(motsApplication[i])
 
     });
+
+
 
 //! Problème : ça ne fonctionne pas cannot read properties of null (reading 'value')
 // Solution : let inputEcriture = document.getElementById("inputEcriture ")  ne fonctionne pas
 // Par contre : let inputEcriture = document.querySelector(".inputEcriture ")  fonctionne... 
 
 
-    console.log("inputEcriture : " + inputEcriture);
-    console.log("boutonValider : " + boutonValider);
+    // console.log("inputEcriture : " + inputEcriture);
+    // console.log("boutonValider : " + boutonValider);
 
-    // const motsApplication = ["Cachalot", "Pétunia", "Serviette", "Bourriquet", "Eléphant"]
-    i = 0
-    score = 0
+    
 
     //Je vérifie que je récupère bien le mot : ça marche
 
@@ -249,3 +265,9 @@ function init() {
 
 
 document.addEventListener("DOMContentLoaded", init)
+
+
+
+
+
+// https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8206297-interagissez-avec-un-element-d-une-page-web-grace-aux-evenements

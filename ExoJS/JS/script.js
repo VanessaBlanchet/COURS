@@ -19,18 +19,16 @@ let listeInputRadio = document.querySelectorAll(".zoneChoix input")
 
 
 
-// https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8205925-recuperez-un-element-d-une-page-web
-
 
 //! Récupérer des éléments de la page HTML et les modifier
 
 // J'ai ajouté un id à mon Span dans la page index.html afin de pouvoir affiché en front
 // le mot demandé. Je le récupère ici, puis je vérifie que ça marche en faisant un console.log
 
-let motAffiche = document.getElementById("motAffiche")
-let nouveauMot = document.createElement("p")
+// let motAffiche = document.getElementById("motAffiche")
+// let nouveauMot = document.createElement("p")
 
-console.log("Mot Affiché : " + motAffiche);
+// console.log("Mot Affiché : " + motAffiche);
 
 // ça marche
 
@@ -53,11 +51,11 @@ baliseImage.src = "https://fastly.picsum.photos/id/292/300/300.jpg?hmac=j0Jbm_zV
 // la nouvelle valeur de alt pour l'image est passée de "Image aléatoire" (tapé dans le html) à 
 // "Ceci est la nouvelle valeur de alt pour l'image" (entré ci-dessus). 
 
-baliseImage.classList.add("nouvelle_classe", "truc")
-console.log("Liste des classes de la balise image : " + baliseImage.classList);
+// baliseImage.classList.add("nouvelle_classe", "truc")
+// console.log("Liste des classes de la balise image : " + baliseImage.classList);
 
-baliseImage.classList.remove("truc")
-console.log("Liste des classes de la balise image : " + baliseImage.classList);
+// baliseImage.classList.remove("truc")
+// console.log("Liste des classes de la balise image : " + baliseImage.classList);
 
 
 //! Créer un nouvel élément
