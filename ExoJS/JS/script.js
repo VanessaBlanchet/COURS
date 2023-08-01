@@ -1,14 +1,14 @@
 //! Manipuler les éléments du DOM
 
 
-let baliseZoneProposition = document.getElementById("zoneProposition")
+// let baliseZoneProposition = document.getElementById("zoneProposition")
 
-console.log(baliseZoneProposition)
+// console.log(baliseZoneProposition)
 
-console.log(baliseZoneProposition.clientWidth)
+// console.log(baliseZoneProposition.clientWidth)
 
 
-baliseZoneProposition = document.querySelector("#zoneProposition span")
+// baliseZoneProposition = document.querySelector("#zoneProposition span")
 
 
 // Je récupère tous les éléments de type radio : 

@@ -168,14 +168,16 @@ function init() {
 
     function afficherProposition(motsApplication) {
         
-        let motATaper = document.querySelector(".motAffiche")
-        motATaper.innerText = motsApplication[i];
+        let motATaper = document.querySelector(".zoneProposition")
+        motATaper.innerHTML = motsApplication[i]
+        
     }
 
     //! Attention ici problème : dans la zone de proposition, après "Entrez le mot : " il affiche n'importe quoi...
 
     afficherProposition(motsApplication[i])
-    
+    console.log("mot à Taper : " + motsApplication[i]);
+
     boutonValider.addEventListener("click", function() {
         console.log(inputEcriture.value)
         i ++ 
