@@ -166,11 +166,16 @@ function init() {
 
     // J'affiche la proposition du jeu que l'utilisateur doit recopier : 
 
+
     function afficherProposition(motsApplication) {
         
         let motATaper = document.querySelector(".zoneProposition")
-        motATaper.innerHTML = motsApplication[i]
+
         
+        let contenu = motATaper.innerText
+        
+        motATaper.innerText = motsApplication[i]
+        console.log("Affichage du mot à taper : " + motATaper.innerText);
     }
 
     //! Attention ici problème : dans la zone de proposition, après "Entrez le mot : " il affiche n'importe quoi...
