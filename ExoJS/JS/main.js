@@ -167,20 +167,20 @@ function init() {
     // J'affiche la proposition du jeu que l'utilisateur doit recopier : 
 
 
-    function afficherProposition(motsApplication) {
+    function afficherProposition(tableau) {
         
         let motATaper = document.querySelector(".zoneProposition")
 
         
         let contenu = motATaper.innerText
         
-        motATaper.innerText = motsApplication
+        motATaper.innerText = tableau[i]
         console.log("Affichage du mot à taper : " + motATaper.innerText);
     }
 
     //! Attention ici problème : dans la zone de proposition, après "Entrez le mot : " il affiche n'importe quoi...
 
-    afficherProposition(motsApplication[i])
+    afficherProposition(motsApplication)
     console.log("mot à Taper : " + motsApplication[i]);
 
     boutonValider.addEventListener("click", function() {
@@ -188,7 +188,7 @@ function init() {
         i ++ 
         console.log(i);
         console.log(motsApplication[i]);
-        afficherProposition(motsApplication[i])
+        afficherProposition(motsApplication)
 
     });
 
