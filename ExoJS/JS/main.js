@@ -174,7 +174,7 @@ function init() {
         
         let contenu = motATaper.innerText
         
-        motATaper.innerText = motsApplication[i]
+        motATaper.innerText = motsApplication
         console.log("Affichage du mot à taper : " + motATaper.innerText);
     }
 
