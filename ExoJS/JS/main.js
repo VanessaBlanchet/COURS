@@ -154,9 +154,12 @@
 //! La déclaration de la variable motsApplication ci-dessous a été commentée 
 //! et déplacée dans le fichier config.js
 
+
+
 function init() {
     i = 0
-    score = 0
+
+    // console.log("Id initial : " + i);
 
     // Je mets un écouteur d'évènement sur le bouton Valider
 
@@ -167,57 +170,69 @@ function init() {
     // J'affiche la proposition du jeu que l'utilisateur doit recopier : 
 
 
-    function afficherProposition(tableau) {
+    function afficherProposition(proposition) {
         
         let motATaper = document.querySelector(".zoneProposition")
+        
+        motATaper.innerText = proposition
 
-        
-        let contenu = motATaper.innerText
-        
-        motATaper.innerText = tableau[i]
         console.log("Affichage du mot à taper : " + motATaper.innerText);
     }
 
     //! Attention ici problème : dans la zone de proposition, après "Entrez le mot : " il affiche n'importe quoi...
-
-    afficherProposition(motsApplication)
-    console.log("mot à Taper : " + motsApplication[i]);
-
-    boutonValider.addEventListener("click", function() {
-        console.log(inputEcriture.value)
-        i ++ 
-        console.log(i);
-        console.log(motsApplication[i]);
-        afficherProposition(motsApplication)
-
-    });
+    // Problème réglé grâce à Costin. Le navigateur m'affichait C à la place de Cachalot, é à la place de Pétunia etc
+    // Costin m'a fait remarqué que j'affichais la 1e lettre du 1er mot, la 2e lettre du 2e mot etc
+    // parce que j'ai incrémenté deux fois le tableau motsApplication et que j'avais mis motApplication en paramètre
+    // de ma fonction afficherProposition
+    // alors que cela n'a rien à voir : on peut mettre ce qu'on veut comme variable en paramètre de la fonction
+    // et on définit après, à l'intérieur de la fonction, à quoi cette variable correspond
+    // du coup j'ai remplacé motApplication par tableau dans le paramètre de la fonction
+    // et remis après, à l'intérieur, la ligne motATaper.innertext = tableau 
+    // et le lien est fait avec le tableau des mots à afficher dans le paramètre lorsque j'appelle la fonction 
+    // afficherProposition, ci-dessous
 
 
 
-//! Problème : ça ne fonctionne pas cannot read properties of null (reading 'value')
-// Solution : let inputEcriture = document.getElementById("inputEcriture ")  ne fonctionne pas
-// Par contre : let inputEcriture = document.querySelector(".inputEcriture ")  fonctionne... 
-
-
-    // console.log("inputEcriture : " + inputEcriture);
-    // console.log("boutonValider : " + boutonValider);
+    // j'affiche la proposition initiale
 
     
+    afficherProposition(motsApplication[i])
 
-    //Je vérifie que je récupère bien le mot : ça marche
+    // J'ajoute mon EventListener au bouton valider : 
 
-    // console.log("motApplication : " + motsApplication[i])
-    console.log("Id initial : " + i);
-    console.log("Score initial : " + score);
+    boutonValider.addEventListener("click", function() {
 
-    // Je vérifie que je récupère bien le mot entré par l'utilisateur : ça marche 
+        console.log("inputEcriture.value : " + inputEcriture.value)
 
-    // motUtilisateur = prompt("Entrez le mot : " + motsApplication[i])
+        i ++ 
 
-    // console.log("motUtilisateur : " + motUtilisateur)
+        inputEcriture.value = "" // je vide le champ de texte à chaque fois que "valider" est cliqué
+
+        // Je teste si le mot proposé est undefined, si oui j'affiche "le jeu est fini" sinon, j'affiche le prochain mot
+
+        if (motsApplication[i] === undefined){
+            afficherProposition("Le jeu est fini")
+            boutonValider.disabled = true
+        } else {
+            afficherProposition(motsApplication[i])
+        }
 
 
 
+        console.log("i : " + i);
+        
+        console.log("prochain motApplication : " + motsApplication[i]);
+
+        
+
+    });
+  
+
+    
+}
+
+
+    
     // while (i < 5) {
 
     //     console.log("Id du mot demandé : " + i)
@@ -255,18 +270,8 @@ function init() {
 //         }
 //     }
 // }
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 
-//! Les fonctions
-
-// => voir fichier config.js
-
-// let nombreQuestions = 5
-// function retournerMessageScore(score, nombreQuestions) {
-//     let message = 'Votre score est de ' + score + 'sur' + nombreQuestions
-//     return message
-}
+// }
 
 
 
