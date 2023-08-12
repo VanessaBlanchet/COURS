@@ -282,4 +282,4 @@ document.addEventListener("DOMContentLoaded", init)
 
 
 
-// https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8206297-interagissez-avec-un-element-d-une-page-web-grace-aux-evenements
+https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8206488-recuperez-la-valeur-d-un-champ-de-formulaire
